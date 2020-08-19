@@ -1,9 +1,10 @@
-before_install:
-  - gem update bundler
+language: ruby
+os: linux
+dist: xenial
+
 rvm:
-  - 1.9.3
-  - 2.0.0
-  - 2.1.0
-  - 2.2.0
-  - 2.3.0
-  - rbx
+  - 2.3
+  - 2.4
+  - 2.5
+  - 2.6
+  - 2.7
