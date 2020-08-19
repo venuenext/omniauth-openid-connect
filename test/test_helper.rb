@@ -7,7 +7,7 @@ require 'minitest/autorun'
 require 'mocha/minitest'
 require 'faker'
 require 'active_support'
-require 'omniauth_openid_connect'
+require 'omniauth-openid-connect'
 require_relative 'strategy_test_case'
 
 SimpleCov.command_name 'test'
