@@ -1,19 +1,18 @@
 language: ruby
 os: linux
 dist: xenial
-
 rvm:
-  - 2.3
-  - 2.4
-  - 2.5
-  - 2.6
-  - 2.7
+- 2.3
+- 2.4
+- 2.5
+- 2.6
+- 2.7
 env:
   global:
-  - secure: a/PGXExNTx2fUcHkWeDMHGmcL9CL3MBeyMh44QBFq/Dm+eqbP0ptGz8PzpYjvY2hovvR0e7ZryPpGT6lkPwmJ+XyDPzTaZF6EY2lhMHzakkKqkYx7zvL34hJwMnyFXBL8t6jA3BPhhydABqYY9YCumguosbZe0CxFMnvtwf6VbSk46M18QNy7Pt4dHLGK4LEBSIX0SCsMU63fRRXBEKEe9gCljLzx49tud4a4p3D32ycNQyCV3V5UKw/ocigae/k+KjycSpYbwsrekepi/afAZ9lnQrqZ2NpaKqlY6zx+yGfzSQQ0NB3SZzliJ1vNO0QMQEQSX1MuRgjRD4fNj4KfNgfWp448SjLa0jfQ0KwSQv+hLd4j5DjYTFLRF2qzmvvp84hIjijj4APkPWO/9eu/tHr90EjbsEC0Y8EOlOqOPdQOloboPvu0vrPIqzuTzHCvGif4BUCGDThYSXeeOhyPgqR0vTeYr08Y55Ccpg5ZYl9QoRDEs7KLmnxgKfWZblYkv2lq9vlOa7Q9eioe3nQx/j2XfgQGz11CW5nMLaUiSAqWhx22ZurqIeeuknYiD2cWWvsVPuxwGq8TOdNmiqKsicNxOJJG6cGFkux5cNDy4tq2p5v8xJ59cfS2XzFssE99ViOJA8yaJ5f/DgUklSZwJI1LZEgnghIKZV1WBPcay8=
+    secure: GRXWGqaR759iWnYyjR3RHY7IEBRaDx669kRCwDtKgNH6AjVVIDCAHdfo3TcJj2COpv2JiItbNOjsHSU8ivBAmEI8Niwl2OhfRKtc6mByjftvAhl8/epQipPgiF2oHv0VOIPpoVjdN4xBkNi/vNCiK5/my+p71zsA+wM4Y5TNo9iI2K8kfiW3HDKXtHXioV34tUFYYwzi+N5qB7d1DLR0jvE+R08uSbGY3Ep5wzQoC6IyQin1lXtDAhBY2fOg3onJeoeTfWCh/2viouXe4XmMzfAQI0G+eoI7w8RfcOO1fC/XL1b4QFaGejkij2bGqDZv2pNf+ohCk0wbq5UDh/2xxvI+FtyollxJGpWFqZgTJEpRqBgs6QzMRN5JeVAlBhMs+EfMEBysXjylWq/mslTovBbv12S4bdySbQso6MxLSZW8T1hxC2MOZbx8AVwnqHa6qBomDj1dMNiFdMrMt/az4KlB6lHJMt59h10AvbVgExNGfk5+YIY+yX2V7BxHtNA9TZOW3isjYvtkKIhTlph2OcDJCZeS6PEggv8I0Qd9BOBzy4/ieGCzATDQJFXENybxkwFa4HpQCHVoA1XauqVyJ6a9SIKSTtN12n3BY+IMjon44wyglUnhB9WpZy3VLbNto97E+ri9DxsAHzESrhirgwGm6ewmsej+MXwMykhgLVw=
 jobs:
   include:
-    - stage: Build & Deploy Gem
-      script: .vnops/rubygems/deploy.sh
-      rvm: 2.7
-      if: tag =~ /^v*/
+  - stage: Build & Deploy Gem
+    script: ".vnops/rubygems/deploy.sh"
+    rvm: 2.7
+    if: tag =~ /^v*/
